@@ -1,0 +1,41 @@
+<odoo>
+    <data>
+
+        <template id="index">
+            &lt;!DOCTYPE html&gt;
+            <html>
+                <head>
+                  <title>BitBriks Odoo React Todo</title>
+                  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+                  <meta http-equiv="content-type" content="text/html, charset=utf-8" />               
+                </head>
+                <body>
+                    <div class="o_main_content" id="todos-example"/>
+                    <script src="https://unpkg.com/react@18/umd/react.development.js" ></script>
+                    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" ></script>                   
+                    <t t-call-assets="todo.assets"/>
+                </body>
+            </html>
+        </template>        
+<!--
+        <template id="listing">
+          <ul>
+            <li t-foreach="objects" t-as="object">
+              <a t-attf-href="#{ root }/objects/#{ object.id }">
+                <t t-esc="object.display_name"/>
+              </a>
+            </li>
+          </ul>
+        </template>
+        <template id="object">
+          <h1><t t-esc="object.display_name"/></h1>
+          <dl>
+            <t t-foreach="object._fields" t-as="field">
+              <dt><t t-esc="field"/></dt>
+              <dd><t t-esc="object[field]"/></dd>
+            </t>
+          </dl>
+        </template>
+-->
+    </data>
+</odoo>
