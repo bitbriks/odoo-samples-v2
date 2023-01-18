@@ -3,15 +3,14 @@
     'name': "todo",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Sample Bitbriks' todo app to demonstrate how to use React with Odoo.""",
 
     'description': """
-        Long description of module's purpose
+        Build Odoo's standalone UI with Reactjs.
     """,
 
-    'author': "My Company",
-    'website': "https://www.yourcompany.com",
+    'author': "Bitbriks",
+    'website': "https://bitbriks.com",
     'installable': True,
     'application': True,
 
@@ -35,6 +34,9 @@
         'demo/demo.xml',
     ],
     'assets': {
+        ####################################################
+        ##      Javascript files to build React app       ##
+        ####################################################
         'todo.assets': [
             'todo/static/src/index.js',
             'todo/static/src/components/*.js',

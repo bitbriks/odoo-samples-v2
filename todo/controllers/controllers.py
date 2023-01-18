@@ -5,6 +5,7 @@ from odoo import http
 class Todo(http.Controller):
     @http.route('/todo/todo', auth='public')
     def index(self, **kw):
+        print('>>>>==============================')
         return http.request.render('todo.index')
 
     # @http.route('/todo/todo/objects', auth='public')

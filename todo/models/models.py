@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# from odoo import models, fields, api
-
+from odoo import models, fields, api
 
 # class todo(models.Model):
 #     _name = 'todo.todo'
