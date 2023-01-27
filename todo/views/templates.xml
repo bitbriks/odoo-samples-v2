@@ -11,6 +11,15 @@
                 </head>
                 <body>
                     <div class="o_main_content" id="todos-example"/>
+                    <script type="text/javascript">
+                        var odoo = <t t-out="json.dumps({
+                            'debug': debug,
+                        })"/>;
+                        // Prevent the menu_service to load anything. In an ideal world, POS assets would only contain
+                        // what is genuinely necessary, and not the whole backend.
+                        odoo.loadMenusPromise = Promise.resolve();
+                    </script>
+                    <t t-call-assets="web.assets_common" t-css="false" />
                     <script src="https://unpkg.com/react@18/umd/react.development.js" ></script>
                     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" ></script>                   
                     <t t-call-assets="todo.assets"/>

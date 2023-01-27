@@ -10,7 +10,6 @@ class IrQweb(models.AbstractModel):
     """
     _inherit = 'ir.qweb'
 
-    def _get_asset_bundle(self, bundle_name, files, env=None, css=True, js=True):    
-        print('>>>> --- bc')    
+    def _get_asset_bundle(self, bundle_name, files, env=None, css=True, js=True):            
         # return super()._get_asset_bundle(bundle_name, files, env=env, css=css, js=js)
         return assetsbundle.AssetsBundleJsx(bundle_name, files, env=env, css=css, js=js)

@@ -1,3 +1,5 @@
+/* @odoo-module */
+
 import React, { useState } from 'react';
 import { FaPlusCircle } from 'react-icons/fa';
 import PropTypes from 'prop-types';
@@ -26,3 +28,6 @@ const InputTodo = (props) => {
       alert('Please write item');
     }
   };
+};
+
+export default InputTodo;

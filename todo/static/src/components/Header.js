@@ -1,3 +1,5 @@
+/* @odoo-module */
+
 import React from 'react';
 
 const Header = () => {

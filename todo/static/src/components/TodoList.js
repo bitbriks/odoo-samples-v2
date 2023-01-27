@@ -1,3 +1,5 @@
+/* @odoo-module */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import TodoItem from './TodoItem';
