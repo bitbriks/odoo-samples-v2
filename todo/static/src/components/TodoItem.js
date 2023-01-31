@@ -1,9 +1,8 @@
 /* @odoo-module */
 
-import React, { useState } from 'react';
-import { FaTrash } from 'react-icons/fa';
-import PropTypes from 'prop-types';
-import styles from './TodoItem.module.css';
+// import React, { useState } from 'react';
+// import { FaTrash } from 'react-icons/fa';
+// import styles from './TodoItem.module.css';
 
 const TodoItem = (props) => {
   const [editing, setEditing] = useState(false);
@@ -64,17 +63,6 @@ const TodoItem = (props) => {
       />
     </li>
   );
-};
-
-TodoItem.propTypes = {
-  todo: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    completed: PropTypes.bool.isRequired,
-  }).isRequired,
-  deleteTodoProps: PropTypes.func.isRequired,
-  setUpdate: PropTypes.func.isRequired,
-  handleChangeProps: PropTypes.func.isRequired,
 };
 
 export default TodoItem;

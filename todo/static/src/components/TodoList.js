@@ -1,7 +1,6 @@
 /* @odoo-module */
 
-import React from 'react';
-import PropTypes from 'prop-types';
+// import React from 'react';
 import TodoItem from './TodoItem';
 
 const TodosList = (props) => {
@@ -21,13 +20,6 @@ const TodosList = (props) => {
       ))}
     </ul>
   );
-};
-
-TodosList.propTypes = {
-  todos: PropTypes.string.isRequired,
-  handleChangeProps: PropTypes.func.isRequired,
-  deleteTodoProps: PropTypes.func.isRequired,
-  setUpdate: PropTypes.func.isRequired,
 };
 
 export default TodosList;

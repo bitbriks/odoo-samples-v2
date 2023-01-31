@@ -1,14 +1,11 @@
 /* @odoo-module */
 
-import React, { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
-import { Route, Routes } from 'react-router-dom';
+// import React, { useState } from 'react';
+// import { v4 as uuidv4 } from 'uuid';
 import Header from './Header';
 import InputTodo from './InputTodo';
-import TodosList from './TodosList';
-import About from '../pages/About';
-import NotMatch from '../pages/NotMatch';
-import Navbar from './Navbar';
+import TodoList from './TodoList';
+// import NotMatch from '../pages/NotMatch';
 
 const TodoContainer = () => {
   const [todos, setTodos] = useState([]);
@@ -53,24 +50,16 @@ const TodoContainer = () => {
   return (
     <div className="container">
       <div className="inner">
-        <Routes>
-          <Route
-            path="/"
-            element={(
-              <>
-                <Navbar />
-                <Header />
-                <InputTodo addTodoProps={addTodoItem} />
-                <TodosList
-                  todos={todos}
-                  handleChangeProps={handleChange}
-                  deleteTodoProps={delTodo}
-                  setUpdate={setUpdate}
-                />
-              </>
-            )}
+        <>                
+          <Header />
+          <InputTodo addTodoProps={addTodoItem} />
+          <TodosList
+            todos={todos}
+            handleChangeProps={handleChange}
+            deleteTodoProps={delTodo}
+            setUpdate={setUpdate}
           />
-        </Routes>
+        </>
       </div>
     </div>
   );

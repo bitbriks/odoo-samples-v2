@@ -1,8 +1,8 @@
 /* @odoo-module */
 
-import React, { useState } from 'react';
-import { FaPlusCircle } from 'react-icons/fa';
-import PropTypes from 'prop-types';
+// import React, { useState } from 'react';
+// import { FaPlusCircle } from 'react-icons/fa';
+// import PropTypes from 'prop-types';
 
 const InputTodo = (props) => {
   const [inputText, setInputText] = useState({
