@@ -3,7 +3,7 @@
 // import React from 'react';
 import TodoItem from './TodoItem';
 
-const TodosList = (props) => {
+const TodoList = (props) => {
   const {
     todos, handleChangeProps, deleteTodoProps, setUpdate,
   } = props;
@@ -22,4 +22,4 @@ const TodosList = (props) => {
   );
 };
 
-export default TodosList;
+export default TodoList;

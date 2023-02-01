@@ -53,7 +53,7 @@ const TodoContainer = () => {
         <>                
           <Header />
           <InputTodo addTodoProps={addTodoItem} />
-          <TodosList
+          <TodoList
             todos={todos}
             handleChangeProps={handleChange}
             deleteTodoProps={delTodo}

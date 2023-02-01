@@ -8,8 +8,6 @@ import logging
 _logger = logging.getLogger(__name__)
 
 def transpile_jsx(content_bundle):
-    print('transpiling ....')
-    print(content_bundle)
     npm_root = subprocess.run(['npm', '-g', 'root'], text=True, capture_output=True)
     command = ['babel', '--presets', npm_root.stdout + '/@babel/preset-react', '--no-babelrc']
     try:
@@ -45,11 +43,7 @@ class AssetsBundleJsx(AssetsBundle):
             # In production, a better way to distinguish jsx
             # script is needed. 
             if js.url.find('todo') >= 0:
-                print('create JsxAsset')
                 self.javascripts[idx] = JsxAsset(self, url=js.url, filename=js._filename, inline=js.inline)
-                print('is transpiled ' + str(self.javascripts[idx].is_transpiled))
-
-    
 
     def js(self, is_minified=True):
         """
