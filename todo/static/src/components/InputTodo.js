@@ -28,6 +28,21 @@ const InputTodo = (props) => {
       alert('Please write item');
     }
   };
+  return (
+    <form onSubmit={handleSubmit} className="form-container">
+      <input
+        type="text"
+        className="input-text"
+        placeholder="Add todo..."
+        value={inputText.title}
+        name="title"
+        onChange={onChange}
+      />
+      <button type="button" className="input-submit" onClick={handleSubmit}>
+        Add
+      </button>
+    </form>
+  );
 };
 
 export default InputTodo;
