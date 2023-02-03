@@ -28,7 +28,7 @@ const TodoContainer = () => {
 
   const addTodoItem = (title) => {
     const newTodo = {
-      id: uuidv4(),
+      id: new Date().getTime() + '_' + Math.round(Math.random() * 100),
       title,
       completed: false,
     };

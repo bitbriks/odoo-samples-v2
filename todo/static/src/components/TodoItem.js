@@ -38,11 +38,11 @@ const TodoItem = (props) => {
   }
 
   return (
-    <li className={styles.item}>
+    <li className={"item"}>
       <div onDoubleClick={handleEditing} style={viewMode}>
         <input
           type="checkbox"
-          className={styles.checkbox}
+          className={"checkbox"}
           checked={todo.completed}
           onChange={() => handleChangeProps(todo.id)}
         />
@@ -54,7 +54,7 @@ const TodoItem = (props) => {
       <input
         type="text"
         style={editMode}
-        className={styles.textInput}
+        className={"textInput"}
         value={todo.title}
         onChange={(e) => {
           setUpdate(e.target.value, todo.id);
